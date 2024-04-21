@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const About = () => {
   return (
-    <div className="w-full md:h-screen p-2 flex items-center py-16">
+    <div id="about" className="w-full md:h-screen p-2 flex items-center py-16">
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
         <div className="col-span-2">
           <p className="uppercase text-xl tracking-widest text-[#9a4ce7]">
@@ -29,9 +29,11 @@ const About = () => {
             accumsan sodales, enim urna iaculis est, sit amet vulputate enim
             elit sit amet orci. Nullam et suscipit ex.
           </p>
-          <p className="py-2 text-gray-700 underline cursor-pointer">
-            Check out some of my latest projects.
-          </p>
+          <a href="https://github.com/andrewmcl6081" target="_blank">
+            <p className="py-2 text-gray-700 underline cursor-pointer">
+              Check out some of my latest projects.
+            </p>
+          </a>
         </div>
         <div className="w-[320px] h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center py-2 hover:scale-105 ease-in duration-300">
           <Image
