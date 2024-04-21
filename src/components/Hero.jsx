@@ -12,7 +12,7 @@ const Hero = () => {
           </h1>
           <h1 className="py-2 text-gray-700">A Computer Science Student</h1>
           <p className="py-4 text-gray-700 max-w-[70%] m-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            TEST ipsum dolor sit amet, consectetur adipiscing elit. Donec
             faucibus molestie est, ac ultrices ex porttitor nec. Sed condimentum
             finibus auctor. Integer eu imperdiet nunc. Vivamus nisi urna,
             egestas nec nisi rhoncus, posuere interdum sem. Donec nulla nunc,
