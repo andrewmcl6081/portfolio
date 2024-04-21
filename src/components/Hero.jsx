@@ -11,7 +11,7 @@ const Hero = () => {
             Hi, I'm <span className="text-[#9a4ce7]">Andrew</span>
           </h1>
           <h1 className="py-2 text-gray-700">A Computer Science Student</h1>
-          <p className="py-4 text-gray-600 max-w-[70%] m-auto">
+          <p className="py-4 text-gray-700 max-w-[70%] m-auto">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
             faucibus molestie est, ac ultrices ex porttitor nec. Sed condimentum
             finibus auctor. Integer eu imperdiet nunc. Vivamus nisi urna,
