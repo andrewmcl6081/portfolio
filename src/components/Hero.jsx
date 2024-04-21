@@ -22,18 +22,26 @@ const Hero = () => {
             elit sit amet orci. Nullam et suscipit ex.
           </p>
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
-            <div className="rounded-full border-2 border-gray-400 shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
-              <FaLinkedin className="text-2xl" />
-            </div>
-            <div className="rounded-full border-2 border-gray-400 shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
-              <FaGithub className="text-2xl" />
-            </div>
-            <div className="rounded-full border-2 border-gray-400 shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
-              <AiOutlineMail className="text-2xl" />
-            </div>
-            <div className="rounded-full border-2 border-gray-400 shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
-              <HiOutlineDocument className="text-2xl" />
-            </div>
+            <a href="https://www.linkedin.com/in/andrew-mcl/" target="_blank">
+              <div className="rounded-full border-2 border-gray-400 shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+                <FaLinkedin className="text-2xl" />
+              </div>
+            </a>
+            <a href="https://github.com/andrewmcl6081" target="_blank">
+              <div className="rounded-full border-2 border-gray-400 shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+                <FaGithub className="text-2xl" />
+              </div>
+            </a>
+            <a href="mailto:andrewmcl6081@gmail.com">
+              <div className="rounded-full border-2 border-gray-400 shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+                <AiOutlineMail className="text-2xl" />
+              </div>
+            </a>
+            <a href="/Andrew_McLaughlin_Resume.pdf" target="_blank">
+              <div className="rounded-full border-2 border-gray-400 shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+                <HiOutlineDocument className="text-2xl" />
+              </div>
+            </a>
           </div>
         </div>
       </div>
