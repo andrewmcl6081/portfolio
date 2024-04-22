@@ -3,7 +3,7 @@ import Link from "next/link"
 import { useState, useEffect } from "react"
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai"
 import { FaLinkedin, FaGithub } from "react-icons/fa"
-import { BsFillPersonLinesFill } from "react-icons/bs"
+import { HiOutlineDocument } from "react-icons/hi"
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
@@ -33,7 +33,7 @@ const Navbar = () => {
                 Skills
               </li>
             </Link>
-            <Link href="#projects">
+            <Link href="/">
               <li className="ml-10 text-md text-white uppercase hover:border-b">
                 Projects
               </li>
@@ -77,16 +77,16 @@ const Navbar = () => {
           </div>
           <div className="py-4 flex flex-col">
             <ul className="uppercase">
-              <Link href="/">
+              <Link href="#home" onClick={handleNav}>
                 <li className="py-4 text-sm">Home</li>
               </Link>
-              <Link href="/">
+              <Link href="#about" onClick={handleNav}>
                 <li className="py-4 text-sm">About</li>
               </Link>
-              <Link href="/">
+              <Link href="#skills" onClick={handleNav}>
                 <li className="py-4 text-sm">Skills</li>
               </Link>
-              <Link href="/">
+              <Link href="/" onClick={handleNav}>
                 <li className="py-4 text-sm">Projects</li>
               </Link>
             </ul>
@@ -95,18 +95,29 @@ const Navbar = () => {
                 Let&apos;s Connect
               </p>
               <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <FaLinkedin />
-                </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <FaGithub />
-                </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <AiOutlineMail />
-                </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <BsFillPersonLinesFill />
-                </div>
+                <a
+                  href="https://www.linkedin.com/in/andrew-mcl/"
+                  target="_blank"
+                >
+                  <div className="rounded-full border-2 border-gray-400 shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                    <FaLinkedin />
+                  </div>
+                </a>
+                <a href="https://github.com/andrewmcl6081" target="_blank">
+                  <div className="rounded-full border-2 border-gray-400 shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                    <FaGithub />
+                  </div>
+                </a>
+                <a href="mailto:andrewmcl6081@gmail.com">
+                  <div className="rounded-full border-2 border-gray-400 shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                    <AiOutlineMail />
+                  </div>
+                </a>
+                <a href="/Andrew_McLaughlin_Resume.pdf" target="_blank">
+                  <div className="rounded-full border-2 border-gray-400 shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                    <HiOutlineDocument />
+                  </div>
+                </a>
               </div>
             </div>
           </div>
