@@ -9,28 +9,24 @@ const About = () => {
             About
           </p>
           <h2 className="py-2 text-gray-700">Who I Am</h2>
-          <p className="py-2 text-gray-700">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            faucibus molestie est, ac ultrices ex porttitor nec. Sed condimentum
-            finibus auctor. Integer eu imperdiet nunc. Vivamus nisi urna,
-            egestas nec nisi rhoncus, posuere interdum sem. Donec nulla nunc,
-            sollicitudin nec leo a, varius rutrum justo. Cras nec nisl cursus,
-            vulputate purus in, venenatis ante. Aliquam imperdiet, nulla et
-            accumsan sodales, enim urna iaculis est, sit amet vulputate enim
-            elit sit amet orci. Nullam et suscipit ex.
+          <p className="py-2 text-gray-700 text-lg">
+            I&apos;m a passionate developer that enjoys building front-end and
+            back-end solutions. I thrive on tackling challenging problems and
+            enjoy the intrcacy of turning complex issues into streamlined,
+            accessible solutions. My journey in development is driven by an
+            interest in creating secure and robust applications. I&apos;m
+            currently working on new applications with a security focused
+            approach and learning how to mitigate and prevent common
+            vulnerabilities.
           </p>
-          <p className="py-2 text-gray-700">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            faucibus molestie est, ac ultrices ex porttitor nec. Sed condimentum
-            finibus auctor. Integer eu imperdiet nunc. Vivamus nisi urna,
-            egestas nec nisi rhoncus, posuere interdum sem. Donec nulla nunc,
-            sollicitudin nec leo a, varius rutrum justo. Cras nec nisl cursus,
-            vulputate purus in, venenatis ante. Aliquam imperdiet, nulla et
-            accumsan sodales, enim urna iaculis est, sit amet vulputate enim
-            elit sit amet orci. Nullam et suscipit ex.
+          <p className="py-2 text-gray-700 text-lg">
+            In my free time I enjoy hobbies such as hiking, fishing, playing
+            pool, and seeing friends. My goal is to continue enjoying life while
+            learning to become a proficient developer through collaborating with
+            others and picking up new technologies and skills along the way.
           </p>
           <a href="https://github.com/andrewmcl6081" target="_blank">
-            <p className="py-2 text-gray-700 underline cursor-pointer">
+            <p className="py-2 text-gray-700 text-lg underline cursor-pointer">
               Check out some of my latest projects.
             </p>
           </a>
