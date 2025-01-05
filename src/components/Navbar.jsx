@@ -1,130 +1,126 @@
-import Image from "next/image"
-import Link from "next/link"
-import { useState, useEffect } from "react"
-import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai"
-import { FaLinkedin, FaGithub } from "react-icons/fa"
-import { HiOutlineDocument } from "react-icons/hi"
+import Image from "next/image";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { HiOutlineDocument } from "react-icons/hi";
 
 const Navbar = () => {
-  const [nav, setNav] = useState(false)
+  const [nav, setNav] = useState(false);
+  const [activeLink, setActiveLink] = useState("home");
+  const handleNav = () => setNav(!nav);
 
-  const handleNav = () => {
-    setNav(!nav)
-  }
+  const navLinks = [
+    { displayName: "Home", name: "home", href: "#home" },
+    { displayName: "About", name: "about", href: "#about" },
+    { displayName: "Skills", name: "skills", href: "#skills" },
+  ];
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    }
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+          setActiveLink(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Observe actions
+    navLinks.forEach((link) => {
+      const section = document.querySelector(link.href);
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <div className="fixed w-full h-20 bg-[#9a4ce7] shadow-2xl z-[100]">
-      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        <Image src="/taro.png" alt="/" width="75" height="75" />
-        <div>
-          <ul className="hidden md:flex">
-            <Link href="#home">
-              <li className="ml-10 text-md text-white uppercase hover:border-b">
-                Home
-              </li>
-            </Link>
-            <Link href="#about">
-              <li className="ml-10 text-md text-white uppercase hover:border-b">
-                About
-              </li>
-            </Link>
-            <Link href="#skills">
-              <li className="ml-10 text-md text-white uppercase hover:border-b">
-                Skills
-              </li>
-            </Link>
-            <Link href="/">
-              <li className="ml-10 text-md text-white uppercase hover:border-b">
-                Projects
-              </li>
-            </Link>
-          </ul>
+    <div className="fixed w-full z-[100]">
+      {/* Desktop Navbar */}
+      <div className="hidden md:flex fixed top-5 left-1/2 transform -translate-x-1/2 z-50 bg-gray-200 items-center justify-center rounded-full px-6 py-3 shadow-md">
+        {navLinks.map((link) => (
+          <Link key={link.name} href={link.href} >
+            <span
+              onClick={() => setActiveLink(link.name)}
+              className={`mx-4 text-gray-700 text-sm md:text-lg transition-all duration-300 ${
+                activeLink === link.name
+                  ? "bg-white text-black px-4 py-2 rounded-full shadow"
+                  : "hover:text-black"
+              }`}
+            >
+              {link.displayName}
+            </span>
+          </Link>
+        ))}
+        
+      </div>
 
-          {/* Hamburger Icon */}
-          <div onClick={handleNav} className="md:hidden">
-            <AiOutlineMenu size={25} />
-          </div>
-        </div>
+      {/* Hamburger Icon */}
+      <div className="md:hidden fixed top-5 right-5 z-50">
+        <button
+          onClick={handleNav}
+          style={{
+            backgroundColor: "white",
+            backgroundImage: "none",
+          }}
+          className="p-3 rounded-full shadow-lg hover:bg-gray-200 active:bg-gray-300 focus:outline-none transition-all duration-300"
+          aria-label="Open menu"
+        >
+          <AiOutlineMenu size={25} className="text-gray-700"/>
+        </button>
       </div>
 
       {/* Mobile Menu */}
       {/* Overlay */}
-      <div
-        className={
-          nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""
-        }
-      >
-        <div
+      <div className={nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""}>
+        <div 
           className={
             nav
               ? "fixed left-0 top-0 wi[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf] p-10 ease-in duration-500"
               : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
           }
         >
-          <div>
-            <div className="flex w-full items-center justify-between">
-              <Image src="/taro.png" alt="/" width="75" height="75" />
-              <div
-                onClick={handleNav}
-                className="rounded-full shadow-lg cursor-pointer"
+          <div className="flex items-center justify-between p-6">
+            <div className="flex items-center gap-3">
+              <Image src="/taro.png" alt="Bubble Tea Logo" width={40} height={40} className="rounded-full" />
+              <h2 className="font-semibold text-gray-800">Hello there</h2>
+            </div>
+          </div>
+          <nav className="mt-6 px-4">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                onClick={() => {
+                  setActiveLink(link.name);
+                  setNav(false);
+                }}
               >
-                <AiOutlineClose />
-              </div>
-            </div>
-            <div className="border-b border-gray-900 my-4">
-              <p className="w-[85%] md:w-[90%] py-4">Hello there</p>
-            </div>
-          </div>
-          <div className="py-4 flex flex-col">
-            <ul className="uppercase">
-              <Link href="#home" onClick={handleNav}>
-                <li className="py-4 text-sm">Home</li>
-              </Link>
-              <Link href="#about" onClick={handleNav}>
-                <li className="py-4 text-sm">About</li>
-              </Link>
-              <Link href="#skills" onClick={handleNav}>
-                <li className="py-4 text-sm">Skills</li>
-              </Link>
-              <Link href="/" onClick={handleNav}>
-                <li className="py-4 text-sm">Projects</li>
-              </Link>
-            </ul>
-            <div className="pt-40">
-              <p className="uppercase tracking-widest text-[#9a4ce7]">
-                Let&apos;s Connect
-              </p>
-              <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
-                <a
-                  href="https://www.linkedin.com/in/andrew-mcl/"
-                  target="_blank"
+                <div
+                  className={`mb-3 rounded-lg px-4 py-3 transition-all duration-200 ${
+                    activeLink === link.name
+                      ? "bg-white shadow-md text-purple-700"
+                      : "text-gray-600 hover:bg-white/50 hover:text-purple-600"
+                  }`}
                 >
-                  <div className="rounded-full border-2 border-gray-400 shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                    <FaLinkedin />
-                  </div>
-                </a>
-                <a href="https://github.com/andrewmcl6081" target="_blank">
-                  <div className="rounded-full border-2 border-gray-400 shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                    <FaGithub />
-                  </div>
-                </a>
-                <a href="mailto:andrewmcl6081@gmail.com">
-                  <div className="rounded-full border-2 border-gray-400 shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                    <AiOutlineMail />
-                  </div>
-                </a>
-                <a href="/Andrew_McLaughlin_Resume.pdf" target="_blank">
-                  <div className="rounded-full border-2 border-gray-400 shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                    <HiOutlineDocument />
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
+                  {link.displayName}
+                </div>
+              </Link>
+            ))}
+          </nav>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
