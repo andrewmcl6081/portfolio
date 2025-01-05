@@ -1,11 +1,13 @@
 import { AiOutlineMail } from "react-icons/ai"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { HiOutlineDocument } from "react-icons/hi"
+import ParticlesBackground from "./ParticlesBackground";
 
 const Hero = () => {
   return (
     <div id="home" className="w-full h-screen text-center">
-      <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
+      <ParticlesBackground/>
+      <div className="relative z-10 max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
           <h1 className="py-4 text-gray-700">
             Hi, I&apos;m <span className="text-[#9a4ce7]">Andrew</span>
