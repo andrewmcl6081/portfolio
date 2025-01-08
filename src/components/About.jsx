@@ -2,10 +2,10 @@ import Image from "next/image"
 
 const About = () => {
   return (
-    <div id="about" className="w-full md:h-screen flex flex-col items-center py-16">
+    <div id="about" className="w-full md:h-screen flex flex-col items-center py-16 px-4">
       {/* Vertical Line */}
       <div className="bg-gray-200 w-1 h-16 rounded-full mb-8 dark:bg-opacity-60"/>
-      
+
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
         <div className="col-span-2">
           <p className="uppercase text-xl tracking-widest text-[#9a4ce7]">

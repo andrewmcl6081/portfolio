@@ -2,20 +2,22 @@ import Image from "next/image"
 
 const Skills = () => {
   return (
-    <div id="skills" className="w-full lg:h-screen p-2">
+    <div id="skills" className="w-full lg:h-screen p-4">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
         <p className="text-xl tracking-widest uppercase text-[#9a4ce7]">
           Skills
         </p>
         <h2 className="py-4">What I Can Do</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+          <div className="p-6 shadow-lg shadow-[#9a4ce7] rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
-                <img
+                <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-                  height="60"
-                  width="60"
+                  alt="Python Icon"
+                  height={60}
+                  width={60}
+                  priority
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -23,13 +25,15 @@ const Skills = () => {
               </div>
             </div>
           </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+          <div className="p-6 shadow-lg shadow-[#9a4ce7] rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
-                <img
+                <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-                  height="60"
-                  width="60"
+                  alt="Javascript Icon"
+                  height={60}
+                  width={60}
+                  priority
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -37,13 +41,15 @@ const Skills = () => {
               </div>
             </div>
           </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+          <div className="p-6 shadow-lg shadow-[#9a4ce7] rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
-                <img
+                <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
-                  height="60"
-                  width="60"
+                  alt="Java Icon"
+                  height={60}
+                  width={60}
+                  priority
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -51,13 +57,15 @@ const Skills = () => {
               </div>
             </div>
           </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+          <div className="p-6 shadow-lg shadow-[#9a4ce7] rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
-                <img
+                <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
-                  height="60"
-                  width="60"
+                  alt="CPlusPlus Icon"
+                  height={60}
+                  width={60}
+                  priority
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -65,13 +73,15 @@ const Skills = () => {
               </div>
             </div>
           </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+          <div className="p-6 shadow-lg shadow-[#9a4ce7] rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
-                <img
+                <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
-                  height="60"
-                  width="60"
+                  alt="Docker Icon"
+                  height={60}
+                  width={60}
+                  priority
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -79,13 +89,15 @@ const Skills = () => {
               </div>
             </div>
           </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+          <div className="p-6 shadow-lg shadow-[#9a4ce7] rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
-                <img
+                <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
-                  height="60"
-                  width="60"
+                  alt="AWS Icon"
+                  height={60}
+                  width={60}
+                  priority
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -93,13 +105,15 @@ const Skills = () => {
               </div>
             </div>
           </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+          <div className="p-6 shadow-lg shadow-[#9a4ce7] rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
-                <img
+                <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
-                  height="60"
-                  width="60"
+                  alt="MySQL Icon"
+                  height={60}
+                  width={60}
+                  priority
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -107,13 +121,15 @@ const Skills = () => {
               </div>
             </div>
           </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+          <div className="p-6 shadow-lg shadow-[#9a4ce7] rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
-                <img
+                <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
-                  height="60"
-                  width="60"
+                  alt="MongoDB Icon"
+                  height={60}
+                  width={60}
+                  priority
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -121,13 +137,15 @@ const Skills = () => {
               </div>
             </div>
           </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+          <div className="p-6 shadow-lg shadow-[#9a4ce7] rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
-                <img
+                <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
-                  height="60"
-                  width="60"
+                  alt="React Icon"
+                  height={60}
+                  width={60}
+                  priority
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -135,13 +153,15 @@ const Skills = () => {
               </div>
             </div>
           </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+          <div className="p-6 shadow-lg shadow-[#9a4ce7] rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
-                <img
+                <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg"
-                  height="60"
-                  width="60"
+                  alt="OpenCV Icon"
+                  height={60}
+                  width={60}
+                  priority
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -149,13 +169,15 @@ const Skills = () => {
               </div>
             </div>
           </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+          <div className="p-6 shadow-lg shadow-[#9a4ce7] rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
-                <img
+                <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
-                  height="60"
-                  width="60"
+                  alt="Express Icon"
+                  height={60}
+                  width={60}
+                  priority
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -163,13 +185,15 @@ const Skills = () => {
               </div>
             </div>
           </div>
-          <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300">
+          <div className="p-6 shadow-lg shadow-[#9a4ce7] rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
-                <img
+                <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
-                  height="60"
-                  width="60"
+                  alt="Git Icon"
+                  height={60}
+                  width={60}
+                  priority
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
