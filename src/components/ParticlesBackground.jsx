@@ -59,7 +59,7 @@ const ParticlesBackground = () => {
           },
         },
         background: {
-          color: "transparent",
+          color: "#111827",
         },
       }}
       style={{
