@@ -5,18 +5,18 @@ import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { HiOutlineDocument } from "react-icons/hi";
 
+const navLinks = [
+  { displayName: "Home", name: "home", href: "#home" },
+  { displayName: "About", name: "about", href: "#about" },
+  { displayName: "Projects", name: "projects", href: "#projects" },
+  { displayName: "Certs", name: "certs", href: "#certs"},
+  { displayName: "Skills", name: "skills", href: "#skills" },
+];
+
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [activeLink, setActiveLink] = useState("home");
   const handleNav = () => setNav(!nav);
-
-  const navLinks = [
-    { displayName: "Home", name: "home", href: "#home" },
-    { displayName: "About", name: "about", href: "#about" },
-    { displayName: "Projects", name: "projects", href: "#projects" },
-    { displayName: "Certs", name: "certs", href: "#certs"},
-    { displayName: "Skills", name: "skills", href: "#skills" },
-  ];
 
   useEffect(() => {
     const observerOptions = {
