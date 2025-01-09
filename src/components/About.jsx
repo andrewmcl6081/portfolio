@@ -47,7 +47,7 @@ const About = () => {
   );
 
   return (
-    <div id="about" className="w-full md:h-screen flex flex-col items-center py-16 px-4">
+    <div id="about" className="w-full md:h-screen flex flex-col items-center py-8 px-4">
       {/* Vertical Line */}
       <div className="bg-gray-200 w-1 h-16 rounded-full mb-8 dark:bg-opacity-60"/>
 
