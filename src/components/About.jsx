@@ -1,12 +1,64 @@
-import Image from "next/image"
+import Image from "next/image";
+import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
+import { useRef, useState } from "react";
 
 const About = () => {
+  const containerRef = useRef(null);
+  const [hasScrolledDown, setHasScrolledDown] = useState(false);
+  const [previousScroll, setPreviousScroll] = useState(0);
+  const [isScrollingUp, setIsScrollingUp] = useState(false);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
+
+  //Track scroll progress and update state when scrolled down
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    // Determine scroll direction
+    setIsScrollingUp(latest < previousScroll);
+    setPreviousScroll(latest);
+
+    // If scrolling down past threshold, mark as scrolled down
+    if (latest > 0.1 && !hasScrolledDown && !isScrollingUp) {
+      setHasScrolledDown(false);
+    }
+
+    // Only reset when scrolling down from very top
+    if (latest <= 0 && !isScrollingUp) {
+      setHasScrolledDown(false);
+    }
+  });
+
+  const scale = useTransform(scrollYProgress,
+    latest => {
+      if (hasScrolledDown || isScrollingUp) return 1;
+
+      // Cap the maximum scale at 1
+      return Math.min(1, Math.max(0.7, 0.7 + (latest * 0.6)));
+    }
+  );
+
+  const opacity = useTransform(scrollYProgress,
+    latest => {
+      if (hasScrolledDown || isScrollingUp) return 1;
+      return Math.min(1, Math.max(0, latest * 3));
+    }
+  );
+
   return (
     <div id="about" className="w-full md:h-screen flex flex-col items-center py-16 px-4">
       {/* Vertical Line */}
       <div className="bg-gray-200 w-1 h-16 rounded-full mb-8 dark:bg-opacity-60"/>
 
-      <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
+      <motion.div 
+        ref={containerRef}
+        style={{
+          scale,
+          opacity,
+        }}
+        className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8"
+      >
         <div className="col-span-2">
           <p className="uppercase text-xl tracking-widest text-[#9a4ce7]">
             About
@@ -43,9 +95,9 @@ const About = () => {
             height="150"
           />
         </div>
-      </div>
+      </motion.div>
     </div>
-  )
+  );
 }
 
 export default About;
