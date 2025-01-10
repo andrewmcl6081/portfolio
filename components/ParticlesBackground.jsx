@@ -1,3 +1,5 @@
+"use client";
+
 import { loadFull } from "tsparticles";
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
