@@ -6,11 +6,12 @@ const nunito = Nunito({
   weight: ["400", "700"],
   style: ["normal", "italic"],
   display: "swap",
+  variable: "--font-nunito",
 });
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={nunito.className}>
+    <main className={`${nunito.variable} font-sans`}>
       <Component {...pageProps} />
     </main>
   );

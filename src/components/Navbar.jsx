@@ -91,10 +91,10 @@ const Navbar = () => {
               : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
           }
         >
-          <div className="flex items-center justify-between p-6">
+          <div className="flex items-center justify-between p-6 border-b border-gray-100">
             <div className="flex items-center gap-3">
               <Image src="/taro.png" alt="Bubble Tea Logo" width={40} height={40} className="rounded-full" />
-              <h2 className="font-semibold text-[#9a4ce7]">Hello there</h2>
+              <h2 className="font-semibold text-[#9a4ce7]">Welcome</h2>
             </div>
           </div>
           <nav className="mt-6 px-4">
@@ -110,8 +110,8 @@ const Navbar = () => {
                 <div
                   className={`mb-3 rounded-lg px-4 py-3 transition-all duration-200 ${
                     activeLink === link.name
-                      ? "bg-purple-50 shadow-sm text-purple-700"
-                      : "text-gray-600 hover:bg-white/50 hover:text-purple-600"
+                      ? "bg-purple-50 text-[#9a4ce7] font-medium text-lg shadow-sm"
+                      : "text-gray-600 hover:bg-gray-50 hover:text-[#9a4ce7]"
                   }`}
                 >
                   {link.displayName}

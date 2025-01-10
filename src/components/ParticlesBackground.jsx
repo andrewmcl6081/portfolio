@@ -17,7 +17,7 @@ const ParticlesBackground = () => {
           number: { value: 100 },
           color: { value: "#ffffff" },
           shape: { type: "circle" },
-          opacity: { value: 0.5 },
+          opacity: { random: true },
           size: { value: 3 },
           move: {
             enable: true,
