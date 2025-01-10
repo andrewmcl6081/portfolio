@@ -4,12 +4,12 @@ import toolsData from "@/data/toolsData";
 
 const Skills = () => {
   return (
-    <div id="skills" className="w-full md:h-screen px-4 py-8">
+    <div id="skills" className="w-full px-4 py-8 mb-16">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
         <p className="text-xl tracking-widest uppercase text-[#9a4ce7]">
           Skills
         </p>
-        <h2 className="py-4">What I Can Do</h2>
+        <h2 className="py-4 mb-8">What I Can Do</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {toolsData.map((tool, index) => (
             <div key={index} className="p-6 shadow-lg rounded-xl hover:scale-105 ease-in duration-300 bg-white">

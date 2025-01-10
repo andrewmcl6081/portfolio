@@ -3,9 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { HiOutlineDocument } from "react-icons/hi";
+import { AiOutlineMenu } from "react-icons/ai";
 
 const navLinks = [
   { displayName: "Home", name: "home", href: "#home" },
@@ -13,6 +11,7 @@ const navLinks = [
   { displayName: "Projects", name: "projects", href: "#projects" },
   { displayName: "Certs", name: "certs", href: "#certs"},
   { displayName: "Skills", name: "skills", href: "#skills" },
+  { displayName: "Contact", name: "contact", href: "#contact"},
 ];
 
 const Navbar = () => {

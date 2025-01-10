@@ -49,7 +49,7 @@ const About = () => {
   );
 
   return (
-    <div id="about" className="w-full md:h-screen flex flex-col items-center py-8 px-4">
+    <div id="about" className="w-full flex flex-col items-center py-8 px-4 mb-16">
       {/* Vertical Line */}
       <div className="bg-gray-200 w-1 h-24 rounded-full mb-8 dark:bg-opacity-60"/>
 
@@ -65,8 +65,8 @@ const About = () => {
           <p className="uppercase text-xl tracking-widest text-[#9a4ce7]">
             About
           </p>
-          <h2 className="py-2 text-gray-700">Who I Am</h2>
-          <p className="py-2 text-gray-700 text-lg">
+          <h2 className="py-4 mb-8 text-gray-700">Who I Am</h2>
+          <p className="text-gray-700 text-lg">
             I&apos;m a passionate developer that enjoys building front-end and
             back-end solutions. I thrive on tackling challenging problems and
             enjoy the intrcacy of turning complex issues into streamlined,

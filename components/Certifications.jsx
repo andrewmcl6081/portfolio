@@ -3,13 +3,13 @@ import certsData from "@/data/certsData";
 
 const Certifications = () => {
   return (
-    <div id="certs" className="w-full md:h-screen py-8 px-4">
+    <div id="certs" className="w-full py-8 px-4 mb-16">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
         <p className="text-xl tracking-widest uppercase text-[#9a4ce7]">
           Certifications
         </p>
-        <h2 className="py-4">Professional Achievements</h2>
-        <div className="flex flex-wrap justify-center items-center gap-8 py-8">
+        <h2 className="py-4 mb-8">Professional Achievements</h2>
+        <div className="flex flex-wrap justify-center items-center gap-8">
           {certsData.map((cert, index) => (
             <a
               key={index}
