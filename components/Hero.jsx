@@ -1,7 +1,10 @@
+"use client";
+
 import { AiOutlineMail } from "react-icons/ai"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { HiOutlineDocument } from "react-icons/hi"
 import ParticlesBackground from "./ParticlesBackground";
+import { ReactTyped } from "react-typed";
 
 const Hero = () => {
   return (
@@ -10,7 +13,16 @@ const Hero = () => {
       <div className="z-10 max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
           <h1 className="py-4 text-white">
-            Hi, I&apos;m <span className="text-[#9a4ce7]">Andrew</span>.
+            <ReactTyped
+              strings={[
+                "Hi, I'm <span class='text-[#9a4ce7]'>Andrew</span>."
+              ]}
+              typeSpeed={50}
+              backSpeed={30}
+              loop={false}
+              showCursor={false}
+            />
+            {/* Hi, I&apos;m <span className="text-[#9a4ce7]">Andrew</span>. */}
           </h1>
           <h2 className="py-2 text-white text-4xl">Computer Science Student Specializing in Software Development</h2>
           <p className="py-4 text-white text-lg max-w-[70%] m-auto">

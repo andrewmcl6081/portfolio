@@ -1,5 +1,8 @@
-import Image from "next/image";
+"use client";
+
+import ShineImage from "./ShineImage";
 import certsData from "@/data/certsData";
+import { motion } from "framer-motion";
 
 const Certifications = () => {
   return (
@@ -11,15 +14,16 @@ const Certifications = () => {
         <h2 className="py-4 mb-8">Professional Achievements</h2>
         <div className="flex flex-wrap justify-center items-center gap-8">
           {certsData.map((cert, index) => (
-            <a
+            <motion.a
               key={index}
               href={cert.credlyLink}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full md:w-1/2 lg:w-[360px] p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 cursor-pointer bg-white flex flex-col justify-between h-full"
+              whileHover="hover"
             >
               <div className="flex flex-col items-center justify-center gap-6">
-                <div className="w-[120px] sm:w-[140px] lg:w-[160px]">
+                {/* <div className="w-[120px] sm:w-[140px] lg:w-[160px]">
                   <Image
                     src={cert.imagePath}
                     alt={cert.alt}
@@ -27,14 +31,20 @@ const Certifications = () => {
                     height={160}
                     className="rounded-md object-contain"
                   />
-                </div>
+                </div> */}
+                <ShineImage
+                  src={cert.imagePath}
+                  alt={cert.alt}
+                  width={160}
+                  height={160}
+                />
                 <div className="mt-4 text-center">
                   <h3 className="text-lg font-semibold text-gray-700">{cert.title}</h3>
                   <p className="text-gray-600">{cert.issuer}</p>
                   <p className="text-sm text-gray-500">Issued {cert.issueDate}</p>
                 </div>
               </div>
-            </a>
+            </motion.a>
           ))}
         </div>
         <p className="text-center mt-4 text-gray-600">
