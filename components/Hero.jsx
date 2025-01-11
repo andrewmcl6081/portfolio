@@ -22,7 +22,6 @@ const Hero = () => {
               loop={false}
               showCursor={false}
             />
-            {/* Hi, I&apos;m <span className="text-[#9a4ce7]">Andrew</span>. */}
           </h1>
           <h2 className="py-2 text-white text-4xl">Computer Science Student Specializing in Software Development</h2>
           <p className="py-4 text-white text-lg max-w-[70%] m-auto">
