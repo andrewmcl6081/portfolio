@@ -50,9 +50,6 @@ const About = () => {
 
   return (
     <div id="about" className="min-h-screen flex flex-col items-center justify-center py-16 px-4 md:px-6 lg:px-8">
-      {/* Vertical Line */}
-      <div className="bg-gray-300 w-1 sm:w-1.5 h-16 sm:h-20 md:h-24 lg:h-28 rounded-full mb-12 md:mb-16 animate-pulse shadow-sm"/>
-
       <motion.div 
         ref={containerRef}
         style={{
