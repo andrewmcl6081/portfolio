@@ -53,7 +53,7 @@ const Contact = () => {
     <div id="contact" className="min-h-screen flex flex-col justify-center py-16 px-4 md:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto w-full">
         {/* Header Section */}
-        <div className="space-y-2 md:mb-16">
+        <div className="space-y-2 mb-12 md:mb-16">
           <motion.p
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
