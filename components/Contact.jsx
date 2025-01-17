@@ -140,7 +140,7 @@ const Contact = () => {
                 disabled={isSubmitting}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className={`w-full flex items-center justify-center gap-2 bg-[#9a4ce7] text-white py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg font-medium hover:bg-[#8a3cd7] transition-all duration-300 ${isSubmitting ? "opacity-70 cursor-not-allowed" : "" }`}
+                className={`send-form-btn w-full flex items-center justify-center gap-2 bg-[#9a4ce7] text-white py-3 sm:py-4 px-6 sm:px-8 rounded-lg text-base sm:text-lg font-medium hover:bg-[#8a3cd7] transition-all duration-300 ${isSubmitting ? "opacity-70 cursor-not-allowed" : "" }`}
               >
                 {isSubmitting ? (
                   "Sending..."

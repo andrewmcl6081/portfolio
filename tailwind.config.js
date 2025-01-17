@@ -5,6 +5,11 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    "from-blue-500", "to-purple-600",
+    "from-green-500", "to-emerald-500",
+    "from-red-500", "to-orange-600"
+  ],
   theme: {
     extend: {
       fontFamily: {
