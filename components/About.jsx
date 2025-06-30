@@ -106,7 +106,7 @@ const About = () => {
               className="relative w-full max-w-sm rounded-xl overfolow-hidden shadow-lg"
             >
               <Image
-                src="/body_shot.jpg"
+                src="/profile.JPEG"
                 alt="Profile Picture"
                 width={600}
                 height={400}
