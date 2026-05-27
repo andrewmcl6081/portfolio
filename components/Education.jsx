@@ -7,13 +7,14 @@ import educationData from "@/data/educationData";
 
 const Education = () => {
   return (
-    <div id="education" className="min-h-screen flex felx-col justify-center py-16 px-4 md:px-6 lg:px-8">
+    <div id="education" className="flex flex-col justify-center py-20 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto w-full">
         {/* Header Section */}
         <div className="space-y-2 mb-12 md:mb-16">
           <motion.p
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="text-lg sm:text-xl tracking-widest uppercase text-[#9a4ce7] font-medium"
           >
@@ -22,6 +23,7 @@ const Education = () => {
           <motion.h2
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-700"
           >
@@ -33,13 +35,14 @@ const Education = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto"
         >
           {/* University Card */}
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
             {/* Header with Purple Gradient */}
-            <div className="bg-gradient-to-r from-purple-500 to-purple-700 p-6 md:p-8">
+            <div className="bg-linear-to-r from-purple-500 to-purple-700 p-6 md:p-8">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <div className="flex items-center gap-3">
                   <GraduationCap className="w-8 h-8 text-white"/>

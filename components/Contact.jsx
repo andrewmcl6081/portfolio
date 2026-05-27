@@ -50,13 +50,14 @@ const Contact = () => {
 
 
   return (
-    <div id="contact" className="min-h-screen flex flex-col justify-center py-16 px-4 md:px-6 lg:px-8">
+    <div id="contact" className="flex flex-col justify-center py-20 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto w-full">
         {/* Header Section */}
         <div className="space-y-2 mb-12 md:mb-16">
           <motion.p
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="text-lg sm:text-xl tracking-widest uppercase text-[#9a4ce7] font-medium"
           >
@@ -65,6 +66,7 @@ const Contact = () => {
           <motion.h2
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-700"
           >
@@ -76,6 +78,7 @@ const Contact = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
           className="max-w-2xl mx-auto"
         >
@@ -94,7 +97,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full p-3 sm:p-4 rounded-lg border border-gray-300 text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300"
+                    className="w-full p-3 sm:p-4 rounded-lg border border-gray-300 text-base sm:text-lg focus:outline-hidden focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300"
                     placeholder="John Doe"
                   />
                 </div>
@@ -111,7 +114,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full p-3 sm:p-4 rounded-lg border border-gray-300 text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300"
+                    className="w-full p-3 sm:p-4 rounded-lg border border-gray-300 text-base sm:text-lg focus:outline-hidden focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -128,7 +131,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows="4"
-                    className="w-full p-3 sm:p-4 rounded-lg border border-gray-300 text-base sm:text-lg focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300 resize-none"
+                    className="w-full p-3 sm:p-4 rounded-lg border border-gray-300 text-base sm:text-lg focus:outline-hidden focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300 resize-none"
                     placeholder="Your message here..."
                   />
                 </div>
@@ -165,7 +168,7 @@ const Contact = () => {
                 )}
 
                 {submitStatus === "error" && (
-                  <div className="p-4 bg-red-50 border-red-200 text-red-700 rounded-lg text-center text-base sm:text-lg">
+                  <div className="p-4 bg-red-50 border border-red-200 text-red-700 rounded-lg text-center text-base sm:text-lg">
                     Failed to send message. Please try again.
                   </div>
                 )}

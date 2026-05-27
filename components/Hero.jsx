@@ -6,7 +6,7 @@ import links from "@/data/linksData";
 
 const Hero = () => {
   return (
-    <div id="home" className="min-h-screen relative overflow-hidden flex items-center justify-center px-4 py-16 md:py-0">
+    <div id="home" className="min-h-screen relative overflow-hidden flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
       <ParticlesBackground/>
       <div className="z-10 max-w-7xl w-full mx-auto">
         <div className="text-center space-y-6 md:space-y-8">
@@ -36,7 +36,8 @@ const Hero = () => {
                 key={index}
                 href={link.href}
                 target="_blank"
-                className="w-full sm:w-auto flex items-center justify-center bg-white px-6 sm:px-8 py-3 gap-2 rounded-full outline-none text-base sm:text-lg font-medium transition-all duration-300 hover:scale-105 focus:scale-110 active:scale-105 hover:bg-gray-50"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto flex items-center justify-center bg-white px-6 sm:px-8 py-3 gap-2 rounded-full outline-hidden text-base sm:text-lg font-medium transition-all duration-300 hover:scale-105 focus:scale-110 active:scale-105 hover:bg-gray-50"
               >
                 {link.label}
                 {link.icon}

@@ -44,7 +44,7 @@ const Skills = () => {
   };
 
   return (
-    <div id="skills" className="min-h-screen flex flex-col justify-center py-16 px-4 md:px-6 lg:px-8">
+    <div id="skills" className="flex flex-col justify-center py-20 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto w-full">
         {/* Header Section */}
         <div className="space-y-2 mb-12 md:mb-16">
@@ -82,11 +82,11 @@ const Skills = () => {
               className="bg-white p-4 sm:p-6 rounded-xl shadow-lg relative overflow-hidden group"
             >
               <motion.div 
-                className="absolute inset-0 bg-gradient-to-r from-purple-50 to-purple-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                className="absolute inset-0 bg-linear-to-r from-purple-50 to-purple-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 initial={false}
               />
               <div className="relative flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
-                <div className="flex-shrink-0 transform group-hover:rotate-12 transition-transform duration-300">
+                <div className="shrink-0 transform group-hover:rotate-12 transition-transform duration-300">
                   <Image 
                     src={tool.src}
                     alt={tool.alt}

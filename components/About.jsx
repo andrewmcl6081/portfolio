@@ -49,7 +49,7 @@ const About = () => {
   );
 
   return (
-    <div id="about" className="min-h-screen flex flex-col items-center justify-center py-16 px-4 md:px-6 lg:px-8">
+    <div id="about" className="flex flex-col items-center justify-center py-20 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
       <motion.div 
         ref={containerRef}
         style={{
@@ -73,7 +73,7 @@ const About = () => {
               <p className="text-base sm:text-lg leading-relaxed">
                 I&apos;m a passionate developer that enjoys building front-end and
                 back-end solutions. I thrive on tackling challenging problems and
-                enjoy the intrcacy of turning complex issues into streamlined,
+                enjoy the intricacy of turning complex issues into streamlined,
                 accessible solutions. My journey in development is driven by an
                 interest in creating secure and robust applications. I&apos;m
                 currently working on new applications with a security focused
@@ -91,6 +91,7 @@ const About = () => {
               <a
                 href="https://github.com/andrewmcl6081"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block text-base sm:text-lg text-[#9a4ce7] hover:text-[#8a3cd7] underline decoration-2 underline-offset-4 transition-colors duration-300"
               >
                 Check out some of my latest projects
@@ -103,7 +104,7 @@ const About = () => {
             <motion.div
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="relative w-full max-w-sm rounded-xl overfolow-hidden shadow-lg"
+              className="relative w-full max-w-sm rounded-xl overflow-hidden shadow-lg"
             >
               <Image
                 src="/profile.JPEG"

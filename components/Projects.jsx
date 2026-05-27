@@ -2,8 +2,27 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Github, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import projects from "@/data/projectsData";
+
+const NavigationButton = ({ direction, onClick }) => (
+  <div
+    className={`absolute top-1/2 -translate-y-1/2
+      ${direction === "left" ? "-left-4 md:-left-16" : "-right-4 md:-right-16"}
+      w-12 h-12 flex items-center justify-center`}
+  >
+    <motion.button
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
+      onClick={onClick}
+      className="w-full h-full bg-white hover:bg-gray-100 p-3 rounded-full shadow-lg transition-colors flex items-center justify-center"
+      aria-label={`Navigate ${direction}`}
+    >
+      {direction === "left" ? <ChevronLeft className="w-6 h-6" /> : <ChevronRight className="w-6 h-6" />}
+    </motion.button>
+  </div>
+);
 
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,32 +56,15 @@ const Projects = () => {
 
   const CurrentIcon = projects[currentIndex].icon
 
-  const NavigationButton = ({ direction, onClick }) => (
-    <div
-      className={`absolute top-1/2 -translate-y-1/2 
-        ${direction === "left" ? "-left-4 md:-left-16" : "-right-4 md:-right-16"} 
-        w-12 h-12 flex items-center justify-center`}
-    >
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={onClick}
-        className="w-full h-full bg-white hover:bg-gray-100 p-3 rounded-full shadow-lg transition-colors flex items-center justify-center"
-        aria-label={`Navigate ${direction}`}
-      >
-        {direction === "left" ? <ChevronLeft className="w-6 h-6" /> : <ChevronRight className="w-6 h-6" />}
-      </motion.button>
-    </div>
-  );  
-  
   return (
-    <div id="projects" className="min-h-screen flex flex-col justify-center py-16 px-4 md:px-6 lg:px-8">
+    <div id="projects" className="flex flex-col justify-center py-20 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto w-full">
         {/* Header Section */}
         <div className="space-y-2 mb-12 md:mb-16">
           <motion.p
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="text-lg sm:text-xl tracking-widest uppercase text-[#9a4ce7] font-medium"
           >
@@ -71,6 +73,7 @@ const Projects = () => {
           <motion.h2
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-700"
           >
@@ -99,7 +102,7 @@ const Projects = () => {
             exit="exit"
             transition={{ x: { type: "spring", stiffness: 300, damping: 30 }, opacity: { duration: 0.2 }}}
           >
-            <div className={`bg-gradient-to-br ${projects[currentIndex].gradientFrom} ${projects[currentIndex].gradientTo} rounded-2xl shadow-xl overflow-hidden`}>
+            <div className={`bg-linear-to-br ${projects[currentIndex].gradientFrom} ${projects[currentIndex].gradientTo} rounded-2xl shadow-xl overflow-hidden`}>
               {/* Project Icon Section */}
               <div className="relative h-48 flex items-center justify-center p-6">
                 <div className="absolute inset-0 bg-black opacity-10"></div>
@@ -139,7 +142,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
                   >
-                    <Github className="w-5 h-5"/>
+                    <FaGithub className="w-5 h-5"/>
                     View Code
                   </motion.a>
                   <motion.a
